@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-27-2020
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   10-26-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+    <lightning-card title="Data Table with Pagination,Custom LookUp and Inline Editing">
+        <template if:true={showTable}>
+            <c-paginator records={opps} 
+                        total-records={opps.length} 
+                        show-search-box="true" 
+                        onpaginatorchange={handlePaginatorChange}>
+            </c-paginator>
+            <lightning-datatable key-field="Id" 
+                                data={recordsToDisplay} 
+                                columns={columns}
+                                hide-checkbox-column
+                                show-row-number-column
+                                row-number-offset={rowNumberOffset}
+                                
+                                >
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

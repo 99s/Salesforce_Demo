@@ -1,0 +1,57 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-26-2020
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   10-24-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+
+
+    <lightning-card title="Standared Datatable Inline Editing With Custom Pagination " icon-name="custom:custom63"> 
+
+
+
+        <!--             
+         <div class="slds-box">  
+            <c-lwclookup lookup-label="contact" object-api-name="contact" icon-name="standard:contact"  
+              onrecordselection={onAccountSelection}></c-lwclookup>  
+          </div>        -->
+
+
+
+        <div class="slds-m-around_medium">
+            <template if:true={data1}>
+                <lightning-datatable class='datatable' key-field="Id" data={data1} columns={columns}
+                    is-loading={tableLoadingState} onsave={handleSave} draft-values={draftValues}
+                    hide-checkbox-column="true" onsort={handleSort} sorted-by={sortedFields}
+                    sorted-direction={sortDirection} onrowselection={handleRowSelect}>
+                </lightning-datatable>
+            </template>
+
+            <!-- handle Apex error -->
+            <!-- <lightning-card>
+                No Contact Found!!!!!
+            </lightning-card> -->
+
+
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+                </lightning-spinner>
+            </template>
+
+        </div>
+
+        <div style="text-align:center;">
+            <c-custompagination onprevious={handlePrev} onnext={handleNext}></c-custompagination>
+        </div>
+    </lightning-card>
+
+
+
+
+
+</template>

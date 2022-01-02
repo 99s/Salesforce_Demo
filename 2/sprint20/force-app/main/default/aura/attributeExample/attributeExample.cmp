@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="whom" type="String" default="salesforce" access="public"/>
+     <aura:attribute name="age" type="integer" default="24" access="private"/>
+     <aura:attribute name="colour" type="String[]" default="['red','blue','yellow']" access="private"/>
+     <aura:attribute name="colourList" type="List" default="['red','blue','yellows']" access="private"/>
+     <aura:attribute name="colourSet" type="Set" default="['red','blue','yellow']" access="private"/>
+    <aura:attribute name="ContactObj" type="Contact"  access="public"/>
+    <lightning:input aura:id="testInput" value="{!v.age}"/>
+    Welcome {!v.whom},Age:{!v.Age},Color:{!v.colour[0]}<br/><br/>
+    {!v.colourSet[0]},{!v.colourList[0]},{!v.ContactObj}
+    <lightning:button value="component methods" label="component methods" onclick="{!c.doClick}"/>
+    
+</aura:component>

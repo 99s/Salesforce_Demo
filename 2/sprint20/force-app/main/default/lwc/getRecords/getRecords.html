@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="My Contact Record" icon-name="standard:contact">
+        <template if:true={contact.data}>
+            <div class="slds-m-around_medium">
+                <p>{name}</p>
+                <p>{title}</p>
+                <p><lightning-input value={phone}></lightning-input></p>
+                <p><lightning-input value={email}></lightning-input></p>
+            </div>
+        </template>
+        <template if:true={contact.error}>
+            <div>error message</div>
+        </template>
+    </lightning-card>
+</template>

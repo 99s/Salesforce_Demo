@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-24-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title='Get Weather' icon-name="standard:forecasts">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="10">
+                <lightning-input type="text" name="EnterCity" label="Enter City" value={city} onchange={onCityChange}>
+                    <b>Temparature - {temparature}</b>
+                </lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <div class="slds-align_absolute-center">
+            <lightning-button label="GetWeather" variant="brand" onclick={getTemp}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
