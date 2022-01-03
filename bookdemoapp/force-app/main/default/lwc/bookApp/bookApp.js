@@ -6,11 +6,14 @@ export default class BookApp extends LightningElement {
     connectedCallback(){
         this.fetchGoogleBookApiData(BOOK_URL);
     }
-    fetchGoogleBookApiData(url){fetch(url+searchKey, {
-        method:'post',
-        headers:{},
-        body:''
-     }).then(response=>response.json())
+    fetchGoogleBookApiData(url){fetch(url+this.searchKey
+    //     ,
+    //      {
+    //     method:'get',
+    //     headers:{},
+    //     body:''
+    //  }
+     ).then(response=>response.json())
      .then(data=>{
          console.log(data)
          this.books = data
