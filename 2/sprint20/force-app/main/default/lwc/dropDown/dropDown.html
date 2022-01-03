@@ -1,0 +1,90 @@
+<template>
+        <p class="slds-text-heading_small">{activeSectionMessage}</p>
+    
+        <!-- <lightning-button onclick={handleSetActiveSectionC} label="Open Section C"></lightning-button> -->
+    
+        <lightning-accordion class="example-accordion"
+                             onsectiontoggle={handleToggleSection}
+                            >
+            <lightning-accordion-section name="Laptop" label="Laptop">
+               
+                <div style="height: 250px;" class="tablecls">
+                   
+                    <lightning-datatable                   
+                    key-field="id"
+                    data={data}
+                    columns={columns}
+                    onrowselection={getSelectedName}
+                    enable-infinite-loading
+                    onloadmore={loadMoreData}
+                    onrowaction={handleRowAction}
+                    is-loading={tableLoadingState}
+                    onsave={handleSave}
+                    draft-values={draftValues}
+                    onsort={updateColumnSorting}
+                    checkbox-column="true"
+                    required
+                    >
+            </lightning-datatable> 
+            
+            </div>          
+              
+                <lightning-button-menu slot="actions"
+                                      alternative-text="Show menu"
+                                      icon-size="x-small"
+                                      menu-alignment="right">
+                    <lightning-menu-item value="New" label="Menu Item One"></lightning-menu-item>
+                    <lightning-menu-item value="Edit" label="Menu Item Two"></lightning-menu-item>
+                </lightning-button-menu>
+              
+            </lightning-accordion-section>
+    
+            <lightning-accordion-section name="Mouse" label="Mouse">
+                <div style="height: 250px;">
+                    <lightning-datatable
+                    class="tablecls"
+                    key-field="id"
+                    data={data}
+                    columns={columns}
+                    onrowselection={getSelectedName}
+                    enable-infinite-loading
+                    onloadmore={loadMoreData}
+                    onrowaction={handleRowAction}
+                    is-loading={tableLoadingState}
+                    onsave={handleSave}
+                    draft-values={draftValues}
+                    onsort={updateColumnSorting}
+                    checkbox-column="true"
+                    required
+                    >
+            </lightning-datatable>
+            
+                </div>  
+        
+            </lightning-accordion-section>
+    
+            <lightning-accordion-section name="Monitor" label="Monitor">
+                <div style="height: 250px;">
+                    <lightning-datatable
+                    class="tablecls"
+                    key-field="id"
+                    data={data}
+                    columns={columns}
+                    onrowselection={getSelectedName}
+                    enable-infinite-loading
+                    onloadmore={loadMoreData}
+                    onrowaction={handleRowAction}
+                    is-loading={tableLoadingState}
+                    onsave={handleSave}
+                    draft-values={draftValues}
+                    onsort={updateColumnSorting}
+                    checkbox-column="true"
+                    required
+                    >
+            </lightning-datatable> 
+            </div> 
+                
+            </lightning-accordion-section>
+        </lightning-accordion>
+      
+    </template>

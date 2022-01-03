@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-31-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="brand" label="show data" title="show data" onclick={handleClick}
+                class="slds-m-left_x-small">
+            </lightning-button>
+            <template if:true={isVisible}>
+                <div>salesforce!!!!!!!!!!!</div>
+            </template>
+            <template if:false={isVisible}>
+                <div>you can't see the data!!!!!!!!!!</div>
+            </template>
+
+            <lightning-input type="text" label="type hello to see the data" onkeyup={changeHandler}>
+            </lightning-input>
+
+            <template if:true={helloMethod}>
+                <div>data avaialable!!!!!!!</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
