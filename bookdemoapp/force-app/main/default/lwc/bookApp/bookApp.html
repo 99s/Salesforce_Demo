@@ -32,8 +32,10 @@
                                     <div class="slds-m-vertical_medium">
                                         <lightning-button variant="success" label="Buy" title="Successful action"
                                             onclick={handleBuyBook} class="slds-m-left_x-small">
-                                            <c-bookbuy-Component></c-bookbuy-Component>
+                                            
                                         </lightning-button>
+                                        <template if:true={isModalOpen}><c-bookbuy-Component></c-bookbuy-Component></template>
+                                        
                                         <!-- <lightning-button variant="success" label="Buy" title="Successful action"
                                             onclick={handleBuyBook} class="slds-m-left_x-small"></lightning-button> -->
                                     </div>
