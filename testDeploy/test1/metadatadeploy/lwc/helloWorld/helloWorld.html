@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-31-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <!-- <div>{fullname}</div> -->
+    <!-- <div>{age}</div>
+    <div>{details.name}</div>
+    <div>{details.place}</div>
+    <div>{userList}</div> -->
+    <lightning-card title="two way data binding">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" label="Enter Course Name" onkeyup={cahngeHandler}>
+            </lightning-input>
+            <div>{fullname} is course of {title} </div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="@track property">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" label="enter city name" onkeyup={trackHandler}>
+            </lightning-input>
+            <div>{address.city} is my city </div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Getter">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" label="enter city name" onkeyup={getterHandler}>
+            </lightning-input>
+            <div>firstUser user name : {firstUser} is my city </div>
+            <div>multiplication of num1 and num2 is : {multiply}</div>
+        </div>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Wire Get Object Info" icon-name="custom:custom67">
+        <div class="slds-m-horizontal_medium">
+            <template if:true={objectInfo.data}>
+                    <div class="scroller">
+                        <pre>{objectInfoStr}</pre>
+                    </div>
+                </template>
+            </div>
+            <template if:true={objectInfo.error}>
+                Error .Please COntact your Admin .
+            </template>
+        </lightning-card>
+        <!-- <template if:true={records}>
+            <div class="slds-m-around_medium">
+                <template for:each={records} for:item="record">
+                    <p key={record.fields.Id.value}>
+                        {record.fields.Name.value}
+                    </p>
+                </template>
+            </div>
+        </template>
+        <div class="slds-grid">
+            <div class="slds-m-around_medium">
+                <lightning-button label="Previous" onclick={handlePreviousPage}></lightning-button>
+            </div>
+            <div class="slds-m-around_medium slds-col_bump-left">
+                <lightning-button label="Next" onclick={handleNextPage}></lightning-button>
+              </div>
+        </div> -->
+       
+
+
+
+
+
+
+
+
+
+</template>

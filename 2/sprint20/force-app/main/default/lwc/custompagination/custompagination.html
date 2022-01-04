@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-24-2020
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   10-24-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+    
+    <lightning-button variant="success" label="Prev" icon-name="utility:chevronleft" title="Base action"
+    onclick={handlePrev} class="slds-m-left_x-small"></lightning-button> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<lightning-button variant="success" label="Next" icon-name="utility:chevronright" title="Base action"
+    onclick={handleNext} class="slds-m-left_x-small"></lightning-button>
+    <!-- <lightning-layout-item size="12" margin="around-small">
+        <div class="slds-align_absolute-center">
+           <ul class="slds-button-group-row">
+              <template if:true={hasPrev}>
+                 <li class="slds-button-group-item" >
+                    <button class="slds-button slds-button_neutral" onclick ={onPrev}> prev
+                    </button>
+                 </li>
+              </template>
+              <template for:each={pagesList} for:item= "pageNumber">
+                 <li class="slds-button-group-item" key={pageNumber}>
+                    <button data-id={pageNumber} class="slds-button slds-button_neutral"
+                       onclick={onPageClick}>{pageNumber}</button>
+                 </li>
+              </template>
+              <template if:true={hasNext}>
+                 <li class="slds-button-group-item" >
+                    <button class="slds-button slds-button_neutral" onclick={onNext}
+                       >next</button>
+                 </li>
+              </template>
+           </ul>
+        </div>
+     </lightning-layout-item> -->
+    
+</template>
