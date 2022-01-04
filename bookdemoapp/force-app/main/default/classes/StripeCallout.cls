@@ -3,8 +3,8 @@ public with sharing class StripeCallout {
     private static final String CUSTOMER_URL =  StripeAPI.StripeAPIUrl;
     private static final String API_KEY =  StripeAPI.PrivateApiKey;
 
-
-    public static HttpResponse makeGetcallout(){
+    @AuraEnabled(cacheable=true)
+    public static string makeGetcallout(){
             HttpResponse hs = new HttpResponse();
                try{
                 system.debug('API_KEY : '+API_KEY);
@@ -30,7 +30,7 @@ public with sharing class StripeCallout {
                }catch(Exception e){
                 system.debug('Error : '+e);
                }
-               return hs;
+               return hs.getBody();
            }
     
 }
