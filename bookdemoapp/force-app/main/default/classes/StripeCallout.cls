@@ -1,11 +1,12 @@
 public with sharing class StripeCallout {
     
-    private static final String CUSTOMER_URL =  StripeAPI.StripeAPIUrl;
+    private static final String CUSTOMER_URL =  StripeAPI.StripeAPICustomerUrl;
     private static final String API_KEY =  StripeAPI.PrivateApiKey;
 
     @AuraEnabled(cacheable=true)
     public static string makeGetcallout(){
             HttpResponse hs = new HttpResponse();
+            String returnValue = 'initiated.';
                try{
                 system.debug('API_KEY : '+API_KEY);
                Integer statusCode = 0;
@@ -26,11 +27,14 @@ public with sharing class StripeCallout {
             response = hs.getBody();
             statusCode = hs.getStatusCode();
             system.debug('StatusCode : '+hs.getStatusCode());
-            
+            if(statusCode == 200){
+               returnValue = 'success 200 : '+hs.getBody();
+            }
                }catch(Exception e){
                 system.debug('Error : '+e);
+                returnValue = 'failure : '+e;
                }
-               return hs.getBody();
-           }
+               return returnValue;
+            }
     
 }

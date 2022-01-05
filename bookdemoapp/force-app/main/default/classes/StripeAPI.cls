@@ -14,9 +14,15 @@ global class StripeAPI {
         }
         private set;
     }
-    public static String StripeAPIUrl{
+    public static String StripeAPICustomerUrl{
         get{
             return 'https://api.stripe.com/v1/customers';
+        }
+        private set;
+    }
+    public static String StripeAPIChargeUrl{
+        get{
+            return 'https://api.stripe.com/v1/charges';
         }
         private set;
     }
